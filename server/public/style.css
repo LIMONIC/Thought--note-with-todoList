@@ -26,6 +26,22 @@ header h1 {
   font-weight: 200;
 }
 
+header a {
+  position:absolute;
+  right:0px;
+  bottom:0px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 50;
+}
+
+header .row {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 50%);
+}
+
 footer {
   position: absolute;
   text-align: center;

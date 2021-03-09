@@ -24,7 +24,7 @@ function App(){
             },
         ],
     }];
-    
+
     const [notes, setNotes] = useState(testNotes);
     
     function addNote(newNote) {
