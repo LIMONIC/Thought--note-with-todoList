@@ -8,7 +8,7 @@ const session = require('express-session');
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const findOrCreate = require("mongoose-findOrCreate");
+const findOrCreate = require("mongoose-findorcreate");
 const path = require('path');
 const indexPath = path.join(__dirname, 'views/build');
 
@@ -76,7 +76,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/notes"
+    callbackURL: "https://thought-note.herokuapp.com/auth/google/notes"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({
